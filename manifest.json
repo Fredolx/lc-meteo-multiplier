@@ -1,0 +1,9 @@
+{
+    "name": "Meteo Multiplier",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/fredolx/lc-meteo-multiplier",
+    "description": "Bug-fixed version of WeatherMultiplier, Multiplies scrap value according to current meteo",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}
