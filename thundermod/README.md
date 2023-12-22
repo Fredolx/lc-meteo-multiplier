@@ -1,0 +1,1 @@
+Bug-fixed and open-source version of WeatherMultiplier, Multiplies scrap value according to current meteo
