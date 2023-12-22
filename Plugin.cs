@@ -14,10 +14,11 @@ namespace MeteoMultiplier
         {
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
             Harmony harmony = new Harmony(PluginInfo.PLUGIN_GUID);
-            Multipliers[LevelWeatherType.None] = Config.Bind("Multipliers",
-                                "None",
-                                1f,
-                                "No meteorigical event");
+
+            Multipliers.Add(LevelWeatherType.None, Config.Bind("Multipliers",
+                "None",
+                1f,
+                "No weather event"));
             Multipliers.Add(LevelWeatherType.DustClouds, Config.Bind("Multipliers",
                 "DustClouds",
                 1.1f,
