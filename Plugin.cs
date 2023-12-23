@@ -43,43 +43,43 @@ namespace MeteoMultiplier
             Multipliers.Add(LevelWeatherType.None, Config.Bind(
                 "Multipliers",
                 "None",
-                1f,
+                0.4f,
                 "No weather event")
             );
             Multipliers.Add(LevelWeatherType.DustClouds, Config.Bind(
                 "Multipliers",
                 "DustClouds",
-                1.1f,
+                0.44f,
                 "Dust Clouds")
             );
             Multipliers.Add(LevelWeatherType.Foggy, Config.Bind(
                 "Multipliers",
                 "Foggy",
-                1.1f,
+                0.44f,
                 "Foggy")
             );
             Multipliers.Add(LevelWeatherType.Rainy, Config.Bind(
                 "Multipliers",
                 "Rainy",
-                1.1f,
+                0.44f,
                 "Rainy")
             );
             Multipliers.Add(LevelWeatherType.Stormy, Config.Bind(
                 "Multipliers",
                 "Stormy",
-                1.3f,
+                0.52f,
                 "Stormy")
             );
             Multipliers.Add(LevelWeatherType.Flooded, Config.Bind(
                 "Multipliers",
                 "Flooded",
-                1.4f,
+                0.56f,
                 "Flooded")
             );
             Multipliers.Add(LevelWeatherType.Eclipsed, Config.Bind(
                 "Multipliers",
                 "Eclipsed",
-                1.5f,
+                0.6f,
                 "Eclipsed")
             );
         }
