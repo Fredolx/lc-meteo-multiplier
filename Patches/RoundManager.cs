@@ -11,7 +11,10 @@ namespace MeteoMultiplier.Patches
         private static void Prefix(RoundManager __instance)
         {
             LevelWeatherType currentWeather = __instance.currentLevel.currentWeather;
-            __instance.scrapValueMultiplier = Plugin.Multipliers[currentWeather].Value;
+            if (Plugin.MultipliersEnabled.Value)
+                __instance.scrapValueMultiplier = Plugin.Multipliers[currentWeather].Value;
+            if (Plugin.SpawnMultipliersEnabled.Value)
+                __instance.scrapAmountMultiplier = Plugin.SpawnMultipliers[currentWeather].Value;
         }
     }
 }
