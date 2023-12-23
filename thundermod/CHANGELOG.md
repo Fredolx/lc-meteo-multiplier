@@ -1,4 +1,3 @@
-# Changelog 
 ## v1.1.0
 - Added spawn multipliers (amount of scrap spawned)
 - Added apparatus multiplier option (on by default)
