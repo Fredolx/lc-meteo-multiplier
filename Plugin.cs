@@ -15,7 +15,6 @@ namespace MeteoMultiplier
         public static ConfigEntry<bool> SpawnMultipliersEnabled;
         public static ConfigEntry<bool> MultiplyApparatusEnabled;
 
-
         private void Awake()
         {
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");

@@ -11,9 +11,9 @@ namespace MeteoMultiplier.Patches
     {
         private static void Prefix(LungProp __instance)
         {
-            if(Plugin.MultiplyApparatusEnabled.Value)
+            var currentWeather = __instance.roundManager.currentLevel.currentWeather;
+            if(Plugin.MultiplyApparatusEnabled.Value && Plugin.Multipliers.ContainsKey(currentWeather))
             {
-                var currentWeather = __instance.roundManager.currentLevel.currentWeather;
                 __instance.SetScrapValue((int)(__instance.scrapValue * Plugin.Multipliers[currentWeather].Value));
             }
         }
