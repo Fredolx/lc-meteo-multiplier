@@ -15,6 +15,7 @@ namespace MeteoMultiplier
         public static ConfigEntry<bool> SpawnMultipliersEnabled;
         public static ConfigEntry<bool> MultiplyApparatusEnabled;
 
+        public const LevelWeatherType DEFAULT_WEATHER = LevelWeatherType.None;
 
         private void Awake()
         {

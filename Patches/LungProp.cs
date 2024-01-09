@@ -11,10 +11,18 @@ namespace MeteoMultiplier.Patches
     {
         private static void Prefix(LungProp __instance)
         {
-            if(Plugin.MultiplyApparatusEnabled.Value)
+            var currentWeather = __instance.roundManager.currentLevel.currentWeather;
+
+            if (Plugin.MultiplyApparatusEnabled.Value)
             {
-                var currentWeather = __instance.roundManager.currentLevel.currentWeather;
-                __instance.SetScrapValue((int)(__instance.scrapValue * Plugin.Multipliers[currentWeather].Value));
+                if (Plugin.Multipliers.ContainsKey(currentWeather))
+                {
+                    __instance.SetScrapValue((int)(__instance.scrapValue * Plugin.Multipliers[currentWeather].Value));
+                }
+                else
+                {
+                    __instance.SetScrapValue((int)(__instance.scrapValue * Plugin.Multipliers[Plugin.DEFAULT_WEATHER].Value));
+                }
             }
         }
     }
