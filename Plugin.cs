@@ -22,10 +22,10 @@ namespace MeteoMultiplier
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
             Harmony harmony = new Harmony(PluginInfo.PLUGIN_GUID);
             SetConfig();
-            Logger.LogInfo($"MultipliersEnabled: {MultipliersEnabled}");
-            Logger.LogInfo($"MultiplyApparatusEnabled: {MultiplyApparatusEnabled}");
+            Logger.LogInfo($"MultipliersEnabled: {MultipliersEnabled.Value}");
+            Logger.LogInfo($"MultiplyApparatusEnabled: {MultiplyApparatusEnabled.Value}");
             Logger.LogInfo($"Multipliers:\n{string.Join("\n", Multipliers.Select(x => $"{x.Key}:{x.Value.Value}"))}");
-            Logger.LogInfo($"SpawnMultipliersEnabled: {SpawnMultipliersEnabled}");
+            Logger.LogInfo($"SpawnMultipliersEnabled: {SpawnMultipliersEnabled.Value}");
             Logger.LogInfo($"SpawnMultipliers:\n{string.Join("\n", SpawnMultipliers.Select(x => $"{x.Key}:{x.Value.Value}"))}");
             harmony.PatchAll();
         }
