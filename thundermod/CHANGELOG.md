@@ -1,3 +1,5 @@
+## v1.1.3
+- Fix apparatus value multiplication
 ## v1.1.2
 - Fix softlock when attempting to land ship on planets with custom weather (thanks to YoshiWalsh for the contribution!)
 ## v1.1.1
